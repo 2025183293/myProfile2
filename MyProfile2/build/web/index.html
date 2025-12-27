@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Profile Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #F4A261, #E76F51);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main card */
+        .container {
+            width: 90%;
+            max-width: 420px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            color: #fff;
+        }
+
+        /* Title */
+        .container h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #fff;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 12px;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        /* Input fields */
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 10px;
+            border: none;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.85);
+            transition: 0.3s;
+        }
+
+        /* Input hover + focus effects */
+        input:focus, textarea:focus {
+            outline: none;
+            background: #fff;
+            box-shadow: 0 0 5px rgba(255,255,255,0.7);
+        }
+
+        /* Submit Button */
+        button[type="submit"] {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            background: #2A9D8F;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: 0.3s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background: #21867A;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Personal Profile</h2>
+
+    <form action="ProfileServlet" method="POST">
+
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Student ID:</label>
+        <input type="text" name="studentID" required>
+
+        <label>Program:</label>
+        <input type="text" name="program" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Hobbies:</label>
+        <input type="text" name="hobbies">
+
+        <label>Self Introduction:</label>
+        <textarea name="intro" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
